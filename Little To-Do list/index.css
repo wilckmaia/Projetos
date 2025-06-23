@@ -1,0 +1,37 @@
+body {
+  background-color: #f0f2f5;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
+  padding-top: 50px;
+}
+
+#novaTarefa {
+  flex-grow: 1;
+  padding: 8px;
+  margin-right: 5px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  text-align: center;
+}
+
+#adicionarTarefa {
+  padding: 8px 15px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+}
+
+#listaTarefas {
+  color: rgb(0, 0, 0);
+  padding: 8px 15px;
+  border-radius: 4px;
+  margin-top: 50px;
+  position: relative;
+  left: -1200px;
+}

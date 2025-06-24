@@ -1,24 +1,21 @@
-const novoItem = document.getElementById("adicionarTarefa");
-const resultado = document.getElementById("listaTarefas");
+const botao = document.getElementById("adicionarTarefa");
 const input = document.getElementById("novaTarefa");
+const lista = document.getElementById("listaTarefas");
 
-novoItem.addEventListener("click", function () {
-  const valorDoInput = input.value.trim();
+botao.addEventListener("click", adicionar);
 
-  if (valorDoInput !== "") {
-    const li = document.createElement("li");
-    li.textContent = valorDoInput;
+function adicionar() {
+  const li = document.createElement("li");
+  li.textContent = input.value;
 
-    const botaoDeletar = document.createElement("button");
-    botaoDeletar.textContent = "X";
-    botaoDeletar.style.marginLeft = "10px";
+  const botaoX = document.createElement("button");
+  botaoX.textContent = "X";
 
-    botaoDeletar.addEventListener("click", function () {
-      resultado.removeChild(li);
-    });
+  botaoX.addEventListener("click", function () {
+    lista.removeChild(li);
+  });
 
-    li.appendChild(botaoDeletar);
-    resultado.appendChild(li);
-    input.value = "";
-  }
-});
+  li.appendChild(botaoX);
+  lista.appendChild(li);
+  input.value = "";
+}

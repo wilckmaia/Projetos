@@ -2,6 +2,10 @@ const botao = document.getElementById("adicionarTarefa");
 const input = document.getElementById("novaTarefa");
 const lista = document.getElementById("listaTarefas");
 
+if (localStorage.getItem("tarefas")) {
+  lista.innerHTML = localStorage.getItem("tarefas");
+}
+
 botao.addEventListener("click", adicionar);
 
 function adicionar() {
@@ -13,9 +17,13 @@ function adicionar() {
 
   botaoX.addEventListener("click", function () {
     lista.removeChild(li);
+
+    localStorage.setItem("tarefas", lista.innerHTML);
   });
 
   li.appendChild(botaoX);
   lista.appendChild(li);
   input.value = "";
+
+  localStorage.setItem("tarefas", lista.innerHTML);
 }

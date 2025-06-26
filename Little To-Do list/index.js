@@ -4,6 +4,14 @@ const lista = document.getElementById("listaTarefas");
 
 if (localStorage.getItem("tarefas")) {
   lista.innerHTML = localStorage.getItem("tarefas");
+
+  const botoesX = lista.querySelectorAll("button");
+  botoesX.forEach((botaoX) => {
+    botaoX.addEventListener("click", function () {
+      botaoX.parentElement.remove();
+      localStorage.setItem("tarefas", lista.innerHTML); // salva ao excluir
+    });
+  });
 }
 
 botao.addEventListener("click", adicionar);
@@ -17,7 +25,6 @@ function adicionar() {
 
   botaoX.addEventListener("click", function () {
     lista.removeChild(li);
-
     localStorage.setItem("tarefas", lista.innerHTML);
   });
 

@@ -9,7 +9,7 @@ if (localStorage.getItem("tarefas")) {
   botoesX.forEach((botaoX) => {
     botaoX.addEventListener("click", function () {
       botaoX.parentElement.remove();
-      localStorage.setItem("tarefas", lista.innerHTML); // salva ao excluir
+      localStorage.setItem("tarefas", lista.innerHTML);
     });
   });
 }

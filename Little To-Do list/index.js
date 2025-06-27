@@ -21,7 +21,7 @@ function adicionar() {
   li.textContent = input.value;
 
   const botaoX = document.createElement("button");
-  botaoX.textContent = "X";
+  botaoX.textContent = "🗑️";
 
   botaoX.addEventListener("click", function () {
     lista.removeChild(li);

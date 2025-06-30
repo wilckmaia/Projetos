@@ -1,4 +1,4 @@
-const SecretNum = Math.floor(Math.random() * 10) + 1;
+const numeroSecreto = Math.floor(Math.random() * 10) + 1;
 
 function verificar() {
   const input = document.getElementById("palpite");
@@ -8,6 +8,7 @@ function verificar() {
   if (palpite === numeroSecreto) {
     mensagem.textContent = " Parabéns! Você acertou!";
   } else {
-    mensagem.textContent = " Errou! Tente novamente.";
+    mensagem.textContent =
+      " Errou! " + "O numero secreto era : " + numeroSecreto;
   }
 }

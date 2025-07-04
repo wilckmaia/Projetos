@@ -1,4 +1,5 @@
 let contador = 0;
+
 const elementoContador = document.getElementById("display");
 
 function atualizarContador() {
@@ -6,4 +7,9 @@ function atualizarContador() {
   elementoContador.textContent = contador;
 }
 
-setInterval(atualizarContador, 1000);
+const intervalo = setInterval(atualizarContador, 1000);
+
+const botaoPausar = document.getElementById("pauseButton");
+botaoPausar.addEventListener("click", function () {
+  clearInterval(intervalo);
+});

@@ -13,3 +13,9 @@ const botaoPausar = document.getElementById("pauseButton");
 botaoPausar.addEventListener("click", function () {
   clearInterval(intervalo);
 });
+
+const botaoReset = document.getElementById("resetButton");
+
+botaoReset.addEventListener("click", function () {
+  elementoContador.textContent = 0;
+});

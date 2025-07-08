@@ -3,9 +3,10 @@ let segundo = 0;
 let minuto = 0;
 const elementoContador = document.getElementById("display");
 
+const botaoPular = document.getElementById("pular10s");
+
 function atualizarContador() {
   contador++;
-
   if (contador === 60) {
     segundo++;
     contador = 0;
@@ -26,6 +27,10 @@ const botaoPausar = document.getElementById("pauseButton");
 
 botaoPausar.addEventListener("click", function () {
   clearInterval(intervalo);
+});
+
+botaoPular.addEventListener("click", function () {
+  return contador + 10;
 });
 
 const botaoReset = document.getElementById("resetButton");

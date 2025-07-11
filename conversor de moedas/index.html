@@ -7,27 +7,19 @@
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
-    <p>converter</p>
+    <p>reais:</p>
 
-    <input type="number" placeholder="valor" id="input" />
+    <input type="number" id="input" />
 
-    <p>de:</p>
-
-    <select name="escolha uma moeda para converter" id="select2">
-      <option value="value1" id="real">real</option>
+    <p>converter para:</p>
+    <select id="select">
+      <option value="1">Dollar</option>
+      <option value="2">Euro</option>
     </select>
 
-    <br /><br />
-    <p>para:</p>
-    <select name="escolha uma moeda para converter" id="select">
-      <option value="value1" id="dollar">dollar</option>
-    </select>
+    <button id="botaoPausar">Calcular</button>
 
-    <p>converter :</p>
-
-    <button onclick="change()">converter</button>
-
-    <p id="p"></p>
+    <p id="resultado"></p>
 
     <script src="index.js"></script>
   </body>

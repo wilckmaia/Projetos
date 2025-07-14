@@ -19,5 +19,17 @@ botaoPausar.addEventListener("click", function () {
       const resultado3 = valorInput * 26;
       resultadoElemento.textContent = resultado3 + " Ienes";
     }
+  } else if (selecionar.value === "2") {
+    const valorInput = Number(input.value);
+    const resultado4 = valorInput;
+    resultadoElemento.textContent = resultado4 + " Dollars";
+  } else if (select.value === "2") {
+    const valorInput = Number(input.value);
+    const resultado5 = valorInput / 1.6;
+    resultadoElemento.textContent = resultado5 + " Euros";
+  } else if (select.value === "3") {
+    const valorInput = Number(input.value);
+    const resultado6 = valorInput * 120;
+    resultadoElemento.textContent = resultado6 + " Ienes";
   }
 });

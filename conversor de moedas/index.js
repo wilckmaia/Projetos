@@ -25,7 +25,7 @@ botaoPausar.addEventListener("click", function () {
     resultadoElemento.textContent = resultado4 + " Dollars";
   } else if (select.value === "2") {
     const valorInput = Number(input.value);
-    const resultado5 = valorInput / 1.6;
+    const resultado5 = valorInput / 2;
     resultadoElemento.textContent = resultado5 + " Euros";
   } else if (select.value === "3") {
     const valorInput = Number(input.value);

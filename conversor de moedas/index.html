@@ -1,29 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>conversor de moedas</title>
+    <title>Conversor de Moedas</title>
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
-    <select name="" id="selecionar">
-      <option value="1">real</option>
-      <option value="2">dollar</option>
-    </select>
+    <div class="container">
+      <h1>Conversor de Moedas</h1>
 
-    <input type="number" id="input" />
+      <label for="selecionar">Moeda de origem:</label>
+      <select id="selecionar">
+        <option value="1">Real (BRL)</option>
+        <option value="2">Dólar (USD)</option>
+      </select>
 
-    <p>converter para:</p>
-    <select id="select">
-      <option value="1">Dollar</option>
-      <option value="2">Euro</option>
-      <option value="3">Iene</option>
-    </select>
+      <label for="input">Valor:</label>
+      <input type="number" id="input" placeholder="Digite o valor" />
 
-    <button id="botaoPausar">Calcular</button>
+      <label for="select">Converter para:</label>
+      <select id="select">
+        <option value="1">Dólar (USD)</option>
+        <option value="2">Euro (EUR)</option>
+        <option value="3">Iene (JPY)</option>
+      </select>
 
-    <p id="resultado"></p>
+      <button id="botaoPausar">Converter</button>
+
+      <p id="resultado"></p>
+    </div>
 
     <script src="index.js"></script>
   </body>

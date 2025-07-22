@@ -94,5 +94,43 @@ botaoPausar.addEventListener("click", async function () {
       const resultadoDolarParaIene = valorInput * moedaIenevalor;
       resultadoElemento.textContent = resultadoDolarParaIene + " Ienes";
     }
+  } else if (selecionar.value === euroValor) {
+    if (select.value === RealValor) {
+      valorInput = Number(input.value);
+      const euroParaReal = valorInput * dollarToReal * multiplicadorEuro;
+      resultadoElemento.textContent = euroParaReal + " reais";
+      console.log(euroParaReal);
+    } else if (select.value === dollarValor) {
+      valorInput = Number(input.value);
+      const euroParaDolar = valorInput * multiplicadorEuro;
+      resultadoElemento.textContent = euroParaDolar + " Dolares";
+    } else if (select.value === euroValor) {
+      valorInput = Number(input.value);
+      const euroParaEuro = valorInput;
+      resultadoElemento.textContent = euroParaEuro + " Euros";
+    } else if (select.value === ieneValor) {
+      valorInput = Number(input.value);
+      const euroParaIene = valorInput * multiplicadorEuro * moedaIenevalor;
+      resultadoElemento.textContent = euroParaIene + " Ienes";
+    }
+  } else if (selecionar.value === ieneValor) {
+    if (select.value === RealValor) {
+      valorInput = Number(input.value);
+      const ieneParaReal = valorInput * dollarToReal * multiplicadorIene;
+      resultadoElemento.textContent = ieneParaReal + " reais";
+      console.log(ieneParaReal);
+    } else if (select.value === dollarValor) {
+      valorInput = Number(input.value);
+      const ieneParaDollar = valorInput * multiplicadorIene;
+      resultadoElemento.textContent = ieneParaDollar + " Dolares";
+    } else if (select.value === euroValor) {
+      valorInput = Number(input.value);
+      const ieneParaEuro = (valorInput * diffDolarParaEuro) / multiplicadorEuro;
+      resultadoElemento.textContent = ieneParaEuro + " Euros";
+    } else if (select.value === ieneValor) {
+      valorInput = Number(input.value);
+      const ieneParaiene = valorInput;
+      resultadoElemento.textContent = ieneParaiene + " Ienes";
+    }
   }
 });

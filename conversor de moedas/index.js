@@ -125,7 +125,7 @@ botaoPausar.addEventListener("click", async function () {
       resultadoElemento.textContent = ieneParaDollar + " Dolares";
     } else if (select.value === euroValor) {
       valorInput = Number(input.value);
-      const ieneParaEuro = (valorInput * diffDolarParaEuro) / multiplicadorEuro;
+      const ieneParaEuro = valorInput * diffDolarParaEuro * multiplicadorIene;
       resultadoElemento.textContent = ieneParaEuro + " Euros";
     } else if (select.value === ieneValor) {
       valorInput = Number(input.value);

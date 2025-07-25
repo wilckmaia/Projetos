@@ -12,7 +12,23 @@ const ubatuda = "2";
 const BeloHorizonte = "1";
 const uberlandia = "2";
 
+async function saoPaulo() {
+  const response = await fetch(
+    "https://api.open-meteo.com/v1/forecast?latitude=-23.55&longitude=-46.63&current_weather=true"
+  );
+  const result = await response.json();
+  return result["latitude"];
+}
+async function mostrarLatitude() {
+  const latitudesp = await saoPaulo();
+  console.log(latitudesp); // aqui vai mostrar o valor real
+}
+
+mostrarLatitude();
+
 butao.addEventListener("click", () => {
+  console.log(mostrarLatitude);
+
   if (estados.value === sp) {
     console.log("tudo certinho, chefe!");
     cidadeMg.style.display = "none";

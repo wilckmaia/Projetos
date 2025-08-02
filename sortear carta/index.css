@@ -11,16 +11,47 @@ body {
   color: #000000;
 }
 
-h1 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  color: #055225;
+.titulo {
+  font-size: 2rem;
+  width: 0;
+  overflow: hidden;
+  border-right: 2px solid black;
+  white-space: nowrap;
+  animation: digitar 4s steps(20, end) forwards,
+    cursorPisca 0.9s step-end infinite;
+}
+
+@keyframes digitar {
+  from {
+    width: 0;
+  }
+  to {
+    width: 12ch;
+  }
+}
+
+@keyframes cursorPisca {
+  50% {
+    border-color: transparent;
+  }
 }
 
 p {
-  font-size: 1.2rem;
-  margin-bottom: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  position: relative;
+  animation: moverParaLados 3s ease-in-out infinite alternate;
 }
+
+@keyframes moverParaLados {
+  from {
+    left: 0;
+  }
+  to {
+    left: 10px;
+  }
+}
+
 button {
   padding: 10px 20px;
   font-size: 1rem;

@@ -1,29 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <form action="https://formsubmit.co/wilckmaia1311@gmail.com" method="POST">
-      <input type="text" name="name" id="login2" required />
-      <input type="email" name="email" id="senha2" required />
-      <input type="hidden" name="_captcha" value="false" />
-      <input
-        type="hidden"
-        name="_next"
-        value="http://127.0.0.1:5500/index2.js"
-      />
-      <button type="submit">Send</button>
-    </form>
-    <form>
-      <h3>Login</h3>
-      <input type="text" placeholder="Login" id="login" />
-      <input type="password" placeholder="Senha" id="senha" />
-      <input type="submit" onclick="logar(); return false" />
-    </form>
-
-    <script src="index.js"></script>
-  </body>
-</html>
+<form
+  action="https://formsubmit.co/wilckmaia1311@gmail.com"
+  method="POST"
+  class="form"
+>
+  <label for="name">Nome</label>
+  <input type="text" name="name" id="name" required />
+  <label for="email">E-mail</label>
+  <input type="email" name="email" id="email" required />
+  <label for="message">Mensagem</label>
+  <textarea name="message" id="message" required></textarea>
+  <input type="hidden" name="_captcha" value="false" />
+  <input
+    type="hidden"
+    name="_next"
+    value="http://C:/Users/wilck/OneDrive/Desktop/Life/Praticando/login/index2.html"
+  />
+  <button type="submit">Enviar</button>
+</form>
